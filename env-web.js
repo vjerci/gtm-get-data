@@ -22,10 +22,10 @@ let fetchText = async (url) => {
     return res.body;
 };
 
-const baseGTMURL = 'https://crossorigin.me/https://www.googletagmanager.com/gtm.js';
+const baseGTMUrl = 'https://crossorigin.me/https://www.googletagmanager.com/gtm.js';
 
 module.exports = {
     fetchText,
     configTool,
-    baseGTMURL
+    baseGTMUrl
 }

@@ -12,10 +12,10 @@ const config = {
     variant: '' // varaint we are targeting
 }
 
-const baseGTMURL = 'https://www.googletagmanager.com/gtm.js';
+const baseGTMUrl = 'https://www.googletagmanager.com/gtm.js';
 
 module.exports = {
     fetchText,
     config,
-    baseGTMURL
+    baseGTMUrl
 }
