@@ -4,8 +4,8 @@ module.exports = {
     fetchSelectors
 };
 
-function constructURL(gtmID, gaCID, previousGTM) {
-    const url = new URL('https://www.googletagmanager.com/gtm.js');
+function constructURL(baseGTMUrl, gtmID, gaCID, previousGTM) {
+    const url = new URL(baseGTMUrl);
     url.searchParams.append('id', gtmID);
     if (gaCID) {
         url.searchParams.append('cid', gaCID);

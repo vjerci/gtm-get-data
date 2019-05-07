@@ -1,11 +1,11 @@
 const { getGTMData, constructURL, fetchSelectors } = require('../util');
-const { fetchText, configTool } = require('./../env-web');
+const { fetchText, configTool, baseGTMUrl } = require('./../env-web');
 
 const currentUrl = document.currentScript.src;
 const { gtmID, gaCID, previousGTM } = configTool(currentUrl);
 
 async function getIt() {
-        const data = await getGTMData(fetchText, constructURL(gtmID, gaCID, previousGTM));
+        const data = await getGTMData(fetchText, constructURL(baseGTMUrl, gtmID, gaCID, previousGTM));
         const resource = data.resource;
 
         const targetExp =

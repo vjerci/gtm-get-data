@@ -1,5 +1,5 @@
 const { getGTMData, constructURL, fetchSelectors } = require('../util');
-const { fetchText, config: { gtmID, experimentId, variant } } = require('../env-node');
+const { fetchText, config: { gtmID, experimentId, variant, baseGTMUrl } } = require('../env-node');
 
 getIt().then((data) => console.log(data));
 
@@ -7,7 +7,7 @@ async function getIt() {
     let gotIt;
 
     do {
-        const data = await getGTMData(fetchText, constructURL(gtmID));
+        const data = await getGTMData(fetchText, constructURL(baseGTMUrl, gtmID));
         const resource = data.resource;
 
         const targetExp =
