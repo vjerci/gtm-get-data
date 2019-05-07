@@ -24,5 +24,4 @@ async function getIt() {
         return selectors;
 }
 
-
-module.exports = getIt
+getIt.then(selectors => window.hackyOptimizeSelector = selectors).catch(e => console.log(e));
